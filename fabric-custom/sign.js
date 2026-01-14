@@ -46,7 +46,6 @@ function signTranscript(filePath) {
   };
 }
 
-// ===============================
 // 3. Export
-// ===============================
+
 module.exports = signTranscript;
