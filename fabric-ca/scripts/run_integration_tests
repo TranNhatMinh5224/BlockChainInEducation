@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+FABRIC_CA="$(cd "$(dirname "$0")/.." && pwd)"
+export PATH="$PATH:$FABRIC_CA/build/tools"
+
+echo "Running integration tests ..."
+
+go test github.com/hyperledger/fabric-ca/test/integration/...
+
+exit $?

@@ -1,0 +1,60 @@
+# Copyright IBM Corp. All Rights Reserved.
+# SPDX-License-Identifier: Apache-2.0
+
+#general
+coverage
+docs/gen
+node_modules
+npm-debug.log
+yarn.lock
+tmp
+.project
+.DS_Store
+.vscode
+.idea
+.nyc_output/*
+*.csv
+*.heapsnapshot
+.scannerwork/*
+sonar-project.properties
+**/package-lock.json
+
+#test files
+test/temp/**
+!test/temp/.noignore
+# - crypto material
+test/fixtures/crypto-material/crypto-config/
+test/fixtures/crypto-material/channel-config/
+test/fixtures/crypto-material/config-base/twoorgs.genesis.block
+test/fixtures/fabricca/enroll*.*
+test/fixtures/fabricca/test*.*
+# - ts:scenario crypto material
+test/ts-fixtures/crypto-material/crypto-config/
+test/ts-fixtures/crypto-material/channel-config/
+test/ts-fixtures/crypto-material/config-base/twoorgs.genesis.block
+test/ts-fixtures/crypto-material/config-base/threeorgs.genesis.block
+# - generated typescript files
+test/typescript/**/*.js
+test/typescript/**/*.js.map
+
+#fabric-ca-client
+fabric-ca-client/.DS_Store
+fabric-ca-client/node_modules/*
+fabric-ca-client/.nyc_output
+
+#fabric network items
+fabric-network/.DS_Store
+fabric-network/node_modules/*
+fabric-network/.nyc_output
+fabric-network/_*
+fabric-network/e2e
+fabric-network/OUTSTA*
+fabric-network/lib/*
+
+#fabric common items
+fabric-common/node_modules/*
+fabric-common/.nyc_output
+
+#fabric protos items
+fabric-protos/node_modules/*
+fabric-protos/.nyc_output

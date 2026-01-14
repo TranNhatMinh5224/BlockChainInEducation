@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+TOOLS_DIR="$(cd "$(dirname "$0")/../build/tools" && pwd)"
+
+function runlint {
+  go list ./... | xargs "$TOOLS_DIR/golint"
+}
+
+echo "Running lint ..."
+found=$(runlint)
+if [ "$found" != "" ]; then
+   echo "YOU MUST FIX THE FOLLOWING LINT PROBLEMS:"
+   echo "$found"
+   echo "END LINT PROBLEMS"
+   exit 1
+fi
+echo "No lint errors were found"
